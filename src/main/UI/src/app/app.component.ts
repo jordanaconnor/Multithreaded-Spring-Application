@@ -52,7 +52,9 @@ constructor(private httpClient: HttpClient) {}
   onSubmit({value,valid}:{value:Roomsearch,valid:boolean}){
     this.getAll().subscribe(
 
-      rooms => {console.log(Object.values(rooms)[0]);this.rooms=<Room[]>Object.values(rooms)[0]; }
+      rooms => {console.log(Object.values(rooms)[0]);this.rooms=<Room[]>Object.values(rooms)[0];
+        this.rooms.forEach( room => {room.priceEuro = room.price; room.priceCanada = room.price;})
+      }
 
 
     );
@@ -103,6 +105,8 @@ export interface Room{
   roomNumber:string;
   price:string;
   links:string;
+  priceCanada:string;
+  priceEuro:string;
 
 }
 export class ReserveRoomRequest {
