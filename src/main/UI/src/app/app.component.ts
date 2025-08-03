@@ -20,6 +20,12 @@ export class AppComponent implements OnInit{
   //Get request for B1
 messages$ = this.httpClient.get<string[]>(`${this.baseURL}/messages`);
 
+  //GET Request for B3 TimeZones
+timePresentation$ = this.httpClient.get(`${this.baseURL}/time/presentation`, {
+  responseType: 'text'
+});
+
+
 constructor(private httpClient: HttpClient) {}
 
   private getUrl:string = this.baseURL + '/room/reservation/v1/';

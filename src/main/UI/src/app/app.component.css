@@ -936,4 +936,11 @@ footer #socialmedia ul li img {
   border-radius: 50%;
 }
 
+/* Add CSS styling for the B3 Task*/
+#welcome .content .presentation {
+  white-space: pre-line;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #0a5c71;
+}
 /*# sourceMappingURL=style.css.map */

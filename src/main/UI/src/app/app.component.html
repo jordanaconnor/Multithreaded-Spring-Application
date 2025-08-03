@@ -30,7 +30,12 @@
   <div class="scene" id="welcome">
     <article class="content">
 
-
+      <!--Display time message-->
+      <div *ngIf="timePresentation$ | async as presentation"
+           class="presentation"
+           [textContent]="presentation">
+      </div>
+      <br/>
 
       <div class="row">
         <div class=""col-12>
