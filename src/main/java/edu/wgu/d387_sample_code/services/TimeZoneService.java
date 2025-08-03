@@ -32,7 +32,7 @@ public class TimeZoneService {
         return "Join us for an online live presentation held at the Landon Hotel at: \n" +
                 times.get("ET") + " ET | " +
                 times.get("MT") + " MT | " +
-                times.get("UTC") + " UTC";
+                times.get("UTC") + " UTC ";
 
     }
 }
